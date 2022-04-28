@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Random_Cases/static/css/main.7341a8ff.css",
+    "main.js": "/Random_Cases/static/js/main.bf6b99f2.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Random_Cases/static/js/787.28cb0dcd.chunk.js",
+    "static/media/see.jpg": "/Random_Cases/static/media/see.c9871f7f588f2dc471c7.jpg",
+    "static/media/girl.jpg": "/Random_Cases/static/media/girl.3b70289158e331cba969.jpg",
+    "static/media/house.jpg": "/Random_Cases/static/media/house.26bba80bd380b777ca81.jpg",
+    "static/media/Karelia.jpg": "/Random_Cases/static/media/Karelia.e4d9659d7bf5ad1975d5.jpg",
+    "static/media/tree.jpg": "/Random_Cases/static/media/tree.23d0ce39140ab9412885.jpg",
+    "static/media/clock.jpg": "/Random_Cases/static/media/clock.542d2ae53e6688163169.jpg",
+    "static/media/cat.jpg": "/Random_Cases/static/media/cat.8f10b020cd43b87859a8.jpg",
+    "index.html": "/Random_Cases/index.html",
+    "main.7341a8ff.css.map": "/Random_Cases/static/css/main.7341a8ff.css.map",
+    "main.bf6b99f2.js.map": "/Random_Cases/static/js/main.bf6b99f2.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Random_Cases/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7341a8ff.css",
+    "static/js/main.bf6b99f2.js"
+  ]
+}
