@@ -18,7 +18,7 @@ function App() {
                 <Routes>
 
                     <Route path={'/Slider'} element={<Slider/>}/>
-                    <Route path={'/'} element={<Slider/>}/>
+                    <Route path={'/ '} element={<Slider/>}/>
                     <Route path={'/Canvas'} element={<Canvas/>}/>
                     <Route path={'/Video'} element={<Video/>}/>
                     <Route path={'/GetData'} element={<GetData/>}/>
