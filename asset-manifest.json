@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Random_Cases/static/css/main.3cd6d096.css",
-    "main.js": "/Random_Cases/static/js/main.afb28a98.js",
+    "main.css": "/Random_Cases/static/css/main.94a26839.css",
+    "main.js": "/Random_Cases/static/js/main.45796b2d.js",
     "static/js/787.28cb0dcd.chunk.js": "/Random_Cases/static/js/787.28cb0dcd.chunk.js",
     "static/media/see.jpg": "/Random_Cases/static/media/see.c9871f7f588f2dc471c7.jpg",
     "static/media/girl.jpg": "/Random_Cases/static/media/girl.3b70289158e331cba969.jpg",
@@ -10,13 +10,14 @@
     "static/media/tree.jpg": "/Random_Cases/static/media/tree.23d0ce39140ab9412885.jpg",
     "static/media/clock.jpg": "/Random_Cases/static/media/clock.542d2ae53e6688163169.jpg",
     "static/media/cat.jpg": "/Random_Cases/static/media/cat.8f10b020cd43b87859a8.jpg",
+    "static/media/kisspng-arrow-red.png": "/Random_Cases/static/media/kisspng-arrow-red.56154a5cb2313c47cd0c.png",
     "index.html": "/Random_Cases/index.html",
-    "main.3cd6d096.css.map": "/Random_Cases/static/css/main.3cd6d096.css.map",
-    "main.afb28a98.js.map": "/Random_Cases/static/js/main.afb28a98.js.map",
+    "main.94a26839.css.map": "/Random_Cases/static/css/main.94a26839.css.map",
+    "main.45796b2d.js.map": "/Random_Cases/static/js/main.45796b2d.js.map",
     "787.28cb0dcd.chunk.js.map": "/Random_Cases/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cd6d096.css",
-    "static/js/main.afb28a98.js"
+    "static/css/main.94a26839.css",
+    "static/js/main.45796b2d.js"
   ]
 }
