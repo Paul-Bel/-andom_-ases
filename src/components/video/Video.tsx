@@ -20,7 +20,7 @@ export const Video = () => {
     return (
         <div className={style.videoContainer}>
             <title>Video</title>
-            <video className={style.video} ref={video} src={videoFile} onClick={onClickHandler}  id={'progress'}/>
+            <video className={style.video} ref={video} src={videoFile} controls onClick={onClickHandler}  id={'progress'}/>
             <div>{currentTime}</div>
         </div>
     )

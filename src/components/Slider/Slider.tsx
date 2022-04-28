@@ -35,7 +35,7 @@ export const Slider = () => {
     }
 
     return (
-        <div >
+        <div className="slider">
             <title className="title">Slider <br/>&#8656; only swipe &rArr; </title>
         <div ref={sliderRef} className={`keen-slider zoom-out slider`} style={{cursor: 'pointer'}}>
                 {images
