@@ -6,14 +6,18 @@
   align-items: center;
   justify-content: flex-end;
   background-color: #6e5555;
-
+   @media screen and(max-width: 450px){
+     height: 60px;
+   }
   .activeLink {
-    margin-right: 30px;
+    margin-right: 23px;
     color: white;
     text-decoration: none;
     font-size: 30px;
     position: relative;
-
+    -webkit-box-shadow: -5px -5px 5px -5px rgba(206, 221, 199, 0.6) inset;
+    -moz-box-shadow: -5px -5px 5px -5px rgba(206, 221, 199, 0.6) inset;
+    box-shadow: -5px -5px 5px -5px rgba(206, 221, 199, 0.6) inset;
     &:hover{
       color: #9bacd0;
     }
@@ -26,13 +30,17 @@
       z-index: 1;
       left: 0;
     }
-    @media screen and (max-width: 650px){
+    @media screen and (max-width: 900px){
       font-size: 22px;
-      margin-right: 25px;
-    }
-    @media screen and (max-width: 500px){
-      font-size: 16px;
       margin-right: 15px;
+    }
+    @media screen and (max-width: 650px){
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    @media screen and (max-width: 400px){
+      font-size: 12px;
+      margin-right: 10px;
     }
   }
 }

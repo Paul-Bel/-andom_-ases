@@ -8,6 +8,7 @@ import {NavBar} from "./components/NavBar/NavBar";
 import {GetData} from "./components/GetData/GetData";
 import {RandomSquare} from "./components/RandomSquare/RandomSquare";
 import { Blocks } from './components/Block/Blocks';
+import {ShowElement} from "./components/ShowElement/ShowElement";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path={'/GetData'} element={<GetData/>}/>
                     <Route path={'/Squares'} element={<RandomSquare/>}/>
                     <Route path={'/Blocks'} element={<Blocks/>}/>
+                    <Route path={'/ShowElement'} element={<ShowElement/>}/>
 
                 </Routes>
 

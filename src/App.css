@@ -3,7 +3,5 @@
   max-width: 1024px;
   height: 90vh;
   border: 1px;
-  -webkit-box-shadow: 11px 15px 18px 1px rgba(55, 134, 195, 0.62);
-  -moz-box-shadow: 11px 15px 18px 1px rgba(55, 134, 195, 0.62);
-  box-shadow: 11px 15px 18px 1px rgba(55, 134, 195, 0.62);
+   box-shadow: 11px 15px 18px 1px rgba(55, 134, 195, 0.62);
 }

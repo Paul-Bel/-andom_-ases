@@ -1,9 +1,15 @@
 
 .videoContainer {
   margin: 20px auto;
+  width: 60vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-
+  align-items: center;
+  & title{
+    display: block;
+    font-size: 30px;
+  }
   .video {
   cursor: pointer;
     &::-webkit-media-controls {

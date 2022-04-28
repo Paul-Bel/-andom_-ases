@@ -4,11 +4,13 @@ import {useEffect, useRef} from "react";
 export const Blocks = () => {
     //А) с помощью JS
     let ref = useRef<HTMLDivElement>(null)
-    useEffect(() => {ref.current?.classList.add("jsStyle")},[])
+    useEffect(() => {
+        ref.current?.classList.add("jsStyle")
+    }, [])
 
 
     return (
-        <div className={'blocksContainer'} >
+        <div className={'blocksContainer'}>
 
             <div className={'variant'} ref={ref}>
                 <div className='variant jsStyle'><title>А) с помощью JS</title></div>

@@ -70,8 +70,8 @@
 
 @media screen and (max-width: 900px) {
     .alert {
-        font-size: 16px;
+        font-size: 12px;
         right: -3%;
-        padding: 0;
+
     }
 }

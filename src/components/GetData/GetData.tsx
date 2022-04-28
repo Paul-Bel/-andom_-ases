@@ -13,33 +13,34 @@ type DataType = {
     "photo": string,
 }
 type LoadType = 'load' | 'loaded' | ''
-let url:string = 'https://data-server-contacts.herokuapp.com/users'
+let url: string = 'https://data-server-contacts.herokuapp.com/users'
 
 export const GetData = () => {
     const [users, setUsers] = useState<Array<DataType>>()
     const [isLoad, setIsload] = useState<LoadType>('')
     useEffect(() => {
         setIsload('load')
-        axios.get(url).then(res => {
+        axios.get(url).then((res) => {
             setUsers(res.data)
-            setIsload('loaded')
+            if (res) {
+                setIsload('loaded')
+            }
         })
             .catch(() => {
                 setIsload('')
                 alert('сервер не доступен, попробуйте позже')
             })
-       let clean = setTimeout(() => {
-               setIsload('')
-            }, 3000)
+        let clean = setTimeout(() => {
+            setIsload('')
+        }, 4000)
         return () => clearInterval(clean)
     }, [])
     return (
-        isLoad==='load' ? <Preloader/> :
+        isLoad === 'load' ? <Preloader/> :
             <div className={style.dataContainer}>
-                <Alert/>
-                {isLoad==='loaded' && <Alert/>}
+                {(isLoad === 'loaded') && <Alert/>}
                 {users?.map((us, i) => {
-                    return <div className={style.userContainer} key={i+us.id}>
+                    return <div className={style.userContainer} key={i + us.id}>
                         <img className={style.img} src={us.photo} alt="ava"/>
                         <ul className={style.userItems}>
                             <li className={style.userItem}>Name<i>{us.name}</i></li>

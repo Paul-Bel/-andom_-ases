@@ -14,23 +14,21 @@ export const RandomSquare = () => {
         }
         setElement(arr)
     }
-    return(
+    return (
         <div className={style.squareContainer}>
             <div className={style.squares}>
-            {element.map((div, i) => {
-                let R = Math.ceil(Math.random() * 1000)
-                let G = Math.ceil(Math.random() * 1000)
-                let B = Math.ceil(Math.random() * 1000)
-                return <div key={i} className={style.square}
-                     style={{backgroundColor: `rgba(${R}, ${G}, ${B}, 0.55)`}}>{i+1}</div>
-            })}
+                {element.map((div, i) => {
+                    let R = Math.ceil(Math.random() * 1000)
+                    let G = Math.ceil(Math.random() * 1000)
+                    let B = Math.ceil(Math.random() * 1000)
+                    return <div key={i} className={style.square}
+                                style={{backgroundColor: `rgba(${R}, ${G}, ${B}, 0.55)`}}>{i + 1}</div>
+                })}
             </div>
             <button className={style.button} onClick={onClickHandler}>
                 {title}
             </button>
-            <div className={style.line}
-                 // style={{bottom: -3%, right: 14%;}}
-            />
+            <div className={style.line}/>
         </div>
     )
 }

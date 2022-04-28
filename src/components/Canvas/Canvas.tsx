@@ -9,21 +9,17 @@ export const Canvas = () => {
             let ctx = canvas.getContext('2d');
             canvas.width = 800
             canvas.height = 600
-
             //квадрат
             if (ctx) {
                 let heightSq = 240
                 ctx.fillRect(50, 20, heightSq, heightSq)
                 ctx.fillStyle = '#d03b3b'
-            }
-            //прямоугольник
-             if (ctx) {
-                let heightSq = 220
-                ctx.fillRect(440, 330, heightSq+100, heightSq)
+
+                //прямоугольник
+                ctx.fillRect(440, 330, 220 + 100, 220)
                 ctx.fillStyle = '#d03b3b'
-            }
+
             //треугольник
-            if (ctx) {
                 ctx.fillStyle = '#4fff5e';
                 ctx.strokeStyle = '#080808';
                 ctx.lineWidth = 1;
@@ -48,9 +44,7 @@ export const Canvas = () => {
                 ctx.closePath();
                 ctx.beginPath();
 
-            }
             //круг
-            if (ctx) {
                 ctx.arc(170, 450, 120, 0, 2 * Math.PI)
                 ctx.fillStyle = 'red';
                 ctx.fill();
