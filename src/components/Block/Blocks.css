@@ -1,0 +1,32 @@
+.blocksContainer {
+  margin: 20px auto;
+  width: 95%;
+  height: 75vh;
+  display: flex;
+
+  .variant {
+    width: 30%;
+    height: 30%;
+    background-color: #6e5555;
+    color: #9bacd0;
+    text-align: center;
+
+
+    & div{
+      width: 60%;
+      height: 60%;
+      background-color: #2f4bd5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & title {
+        display: inline;
+      }
+    }
+  }
+  .jsStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

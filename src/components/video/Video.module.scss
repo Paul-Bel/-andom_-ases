@@ -1,0 +1,15 @@
+import {MouseEvent} from "react";
+
+let videoFile = 'https://media.istockphoto.com/videos/road-in-the-autumn-park-covered-with-fallen-yellow-leaves-video-id1345549389'
+export const Video = () => {
+    const onClickHandler = (e: MouseEvent<HTMLVideoElement>) => {
+        console.log(e)
+    }
+    return(
+        <video className={style.video} src={videoFile} onClick={onClickHandler} controls/>
+    )
+}
+Kuzzy @Kuzzy
+video::-webkit-media-controls {
+    display:none !important;
+}
