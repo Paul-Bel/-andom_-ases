@@ -58,20 +58,19 @@
     opacity: 0.7;
     border-radius: 13px;
     background-color: green;
-    font-size: 28px;
+    font-size: 21px;
     height: 44px;
     text-align: center;
     padding: 2%;
     margin: 2% 22%;
     box-shadow: 17px 16px 23px 0 rgb(39 174 49 / 62%);
-    bottom: -25%;
-    right: 5%;
+    bottom: -13vh;
+    right: 15vw;
 }
 
 @media screen and (max-width: 900px) {
     .alert {
         font-size: 12px;
-        right: -3%;
 
     }
 }

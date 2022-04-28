@@ -36,7 +36,7 @@ export const Slider = () => {
 
     return (
         <div >
-            <title className="title">Slider <br/>&#8656; swipe &rArr; </title>
+            <title className="title">Slider <br/>&#8656; only swipe &rArr; </title>
         <div ref={sliderRef} className={`keen-slider zoom-out slider`} style={{cursor: 'pointer'}}>
                 {images
                     .map((img, i) => <div key={i} className="keen-slider__slide zoom-out__slide">

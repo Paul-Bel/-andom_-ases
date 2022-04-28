@@ -37,6 +37,7 @@ export const GetData = () => {
     }, [])
     return (
         isLoad === 'load' ? <Preloader/> :
+
             <div className={style.dataContainer}>
                 {(isLoad === 'loaded') && <Alert/>}
                 {users?.map((us, i) => {

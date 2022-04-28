@@ -24,7 +24,7 @@ export const ShowElement = () => {
                     <input value={value} onChange={(e)=> {
                         setValue((e.currentTarget.value.length > 30) ? value : e.currentTarget.value)
                         setText('')
-                    }}/>
+                    }} placeholder={'enter text'}/>
                     </div>
                     <button onClick={()=>onClickHandler(1)}>{(!text) ? 'show' : 'reset'}</button></>}
             </div>
