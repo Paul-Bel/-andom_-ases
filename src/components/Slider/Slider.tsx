@@ -1,48 +1,50 @@
-import MySwiper from "./components/MySwiper";
-import WineCard from "./components/WineCard";
-import EventCard from "./components/EventCard";
-import "./styles.css";
-import data from "./data";
+import {TrackDetails, useKeenSlider} from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
+import cat from './img/cat.jpg'
+import clock from './img/clock.jpg'
+import girl from './img/girl.jpg'
+import see from './img/see.jpg'
+import karelia from './img/Karelia.jpg'
+import house from './img/house.jpg'
+import tree from './img/tree.jpg'
+import React from "react"
+import "./Slider.css"
 
-const events = data.events;
-const wines = data.wines;
-console.log("events", events);
+const images = [cat, clock, girl, see, karelia, house, tree]
 
-export default function App() {
+export const Slider = () => {
+    const [details, setDetails] = React.useState<TrackDetails | null>(null)
+
+    const [sliderRef] = useKeenSlider<HTMLDivElement>({
+        loop: true,
+        detailsChanged(s) {
+            setDetails(s.track.details)
+        },
+        initial: 2,
+    })
+
+    function scaleStyle(idx: number) {
+        if (!details) return {}
+        const slide = details.slides[idx]
+        const scale_size = 0.7
+        const scale = 1 - (scale_size - scale_size * slide.portion)
+        return {
+            transform: `scale(${scale})`,
+            WebkitTransform: `scale(${scale})`,
+        }
+    }
+
     return (
-        <>
-            <h1>Hello</h1>
-            <div>
-                <a href="#events">Events</a>
-            </div>
-            <br />
-            <div>
-                <a href="#wines">Wines</a>
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum
-                luctus felis eget tempor. Quisque nunc enim, tristique ut gravida ut,
-                vulputate lacinia quam. Morbi et leo nec tortor suscipit tristique.
-            </p>
-            <MySwiper
-                Component={EventCard}
-                data={events}
-                title="Events"
-                id={"events"}
-            />
-            <h2>Valami más tartalom</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum
-                luctus felis eget tempor. Quisque nunc enim, tristique ut gravida ut,
-                vulputate lacinia quam. Morbi et leo nec tortor suscipit tristique.
-            </p>
-            <MySwiper Component={WineCard} data={wines} title="Wines" id={"wines"} />
-            <h2>Megint Valami más tartalom</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum
-                luctus felis eget tempor. Quisque nunc enim, tristique ut gravida ut,
-                vulputate lacinia quam. Morbi et leo nec tortor suscipit tristique.
-            </p>
-        </>
-    );
+        <div >
+            <title className="title">Slider <br/>&#8656; swipe &rArr; </title>
+        <div ref={sliderRef} className={`keen-slider zoom-out slider`} style={{cursor: 'pointer'}}>
+                {images
+                    .map((img, i) => <div key={i} className="keen-slider__slide zoom-out__slide">
+                            <div style={scaleStyle(i)}>
+                                <img className="img" src={img} />
+                            </div>
+                        </div>)}
+                </div>
+        </div>
+    )
 }

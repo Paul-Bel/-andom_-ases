@@ -1,0 +1,119 @@
+.squareContainer {
+  height: 60vh;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+
+  .squares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 430px;
+    border-bottom: solid #6e5555;
+    -webkit-box-shadow: -5px -5px 5px -5px rgba(39, 174, 49, 0.6) inset;
+    -moz-box-shadow: -5px -5px 5px -5px rgba(39, 174, 49, 0.6) inset;
+    box-shadow: -5px -5px 5px -5px rgba(39, 174, 49, 0.6) inset;
+    .square {
+      width: 50px;
+      height: 50px;
+      border: 3px dashed #2f2d2d;
+      text-align: center;
+      vertical-align:middle;
+      line-height: 50px;
+      @media screen and (max-width: 900px){
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+      @media screen and (max-width: 450px){
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .div {
+    width: 10px;
+    height: 10px;
+    background-color: #3cefff;
+  }
+
+  .button {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 7px 20px;
+    background: transparent;
+    margin: 15px auto;
+    text-align: center;
+    width: 130px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    &:active{
+      color: #2f2d2d;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 8px;
+      width: 80%;
+      background: #4e93e6;
+      border-radius: 5px;
+      z-index: -1;
+      transition: all 0.2s ease-in-out 0s;
+      margin: -5px auto;
+    }
+
+    &:hover:after {
+      height: 130%;
+      width: 100%;
+    }
+
+    &:active:after {
+      height: 130%;
+      width: 100%;
+      background: #2f4bd5;
+    }
+  }
+  @keyframes move {
+    0% {
+      right: -40%;
+    }   60% {
+      right: 50%;
+    }
+    75% {
+      right: 14%;
+    }
+    85% {
+      right: 20%;
+    }
+    100% {
+      right: 14%;
+    }
+  }
+  .line{
+    animation: 3s move;
+    position: absolute;
+    width: 330px;
+    height: 50px;
+    background: #4e93e6;
+    border-radius: 55% 5px 5px 55%;
+    bottom: -3%;
+    right: 14%;
+    @media screen and (max-width: 900px){
+      width: 200px;
+    }
+    @media screen and (max-width: 450px){
+      width: 80px;
+    }
+  }
+}

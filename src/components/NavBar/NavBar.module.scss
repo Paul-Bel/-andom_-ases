@@ -1,3 +1,44 @@
+.headerContainer {
+  width: 100%;
+  height: 90px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #6e5555;
 
+  .activeLink {
+    margin-right: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    position: relative;
 
-export const
+    &:hover{
+      color: #9bacd0;
+    }
+    &:hover::after{
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      width: 100%;
+      border: 2px solid #9bacd0;
+      z-index: 1;
+      left: 0;
+    }
+    @media screen and (max-width: 650px){
+      font-size: 22px;
+      margin-right: 25px;
+    }
+    @media screen and (max-width: 500px){
+      font-size: 16px;
+      margin-right: 15px;
+    }
+  }
+}
+@media screen and (max-width: 900px){
+  .screen {
+    display: none;
+  }
+}
+

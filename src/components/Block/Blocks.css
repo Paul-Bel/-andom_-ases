@@ -3,30 +3,38 @@
   width: 95%;
   height: 75vh;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .variant {
-    width: 30%;
-    height: 30%;
-    background-color: #6e5555;
-    color: #9bacd0;
-    text-align: center;
+.variant {
+  width: 30%;
+  height: 30%;
+  background-color: #6e5555;
+  color: #9bacd0;
+  text-align: center;
+}
 
+.variant div {
+  width: 60%;
+  height: 60%;
+  background-color: #2f4bd5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    & div{
-      width: 60%;
-      height: 60%;
-      background-color: #2f4bd5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      & title {
-        display: inline;
-      }
-    }
-  }
-  .jsStyle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.variant div title {
+  display: inline;
+}
+/*Б) с помощью CSS*/
+.jsStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px){
+  .variant div title {
+    font-size: 12px;
   }
 }

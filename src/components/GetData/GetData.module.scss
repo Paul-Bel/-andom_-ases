@@ -1,1 +1,27 @@
-setTime(e.currentTarget.currentTime)
+.dataContainer {
+  position: relative;
+
+  .userContainer {
+    margin: 20px auto;
+    max-width: 350px;
+    max-height: 100px;
+    display: flex;
+    border: 1px solid;
+    align-items: center;
+    justify-content: flex-start;
+
+    .userItems {
+      margin-left: 5px;
+
+      .userItem {
+
+      }
+    }
+
+    .img {
+      width: 80px;
+      height: 80px;
+      margin-left: 15px;
+    }
+  }
+}

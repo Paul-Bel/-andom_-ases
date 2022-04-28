@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Slider} from "./components/Slider/Slider";
+import {Canvas} from "./components/Canvas/Canvas";
+import {Video} from "./components/video/Video";
+import {HashRouter, Route, Routes} from "react-router-dom";
+import {NavBar} from "./components/NavBar/NavBar";
+import {GetData} from "./components/GetData/GetData";
+import {RandomSquare} from "./components/RandomSquare/RandomSquare";
+import { Blocks } from './components/Block/Blocks';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <HashRouter>
+                <NavBar/>
+                <Routes>
+                    <Route path={'/Slider'} element={<Slider/>}/>
+                    <Route path={'/Canvas'} element={<Canvas/>}/>
+                    <Route path={'/Video'} element={<Video/>}/>
+                    <Route path={'/GetData'} element={<GetData/>}/>
+                    <Route path={'/Squares'} element={<RandomSquare/>}/>
+                    <Route path={'/Blocks'} element={<Blocks/>}/>
+
+                </Routes>
+
+            </HashRouter>
+        </div>
+    )
+        ;
 }
 
 export default App;
