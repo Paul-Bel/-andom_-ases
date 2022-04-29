@@ -16,7 +16,6 @@ function App() {
             <HashRouter>
                 <NavBar/>
                 <Routes>
-
                     <Route path={'/Slider'} element={<Slider/>}/>
                     <Route path={'/'} element={<Slider/>}/>
                     <Route path={'/Canvas'} element={<Canvas/>}/>
@@ -25,7 +24,6 @@ function App() {
                     <Route path={'/Squares'} element={<RandomSquare/>}/>
                     <Route path={'/Blocks'} element={<Blocks/>}/>
                     <Route path={'/ShowElement'} element={<ShowElement/>}/>
-
                 </Routes>
 
             </HashRouter>

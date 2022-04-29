@@ -34,12 +34,15 @@
       width: 32vw;
       height: 30px;
       padding: 5px;
-      font-size: 25px;
+      font-size: 18px;
       text-align: center;
       border: 1px solid #2f4bd5;
       box-shadow: -5px -5px 5px -5px rgb(39 97 174 / 60%) inset;
       align-items: center;
       justify-content: center;
+      @media screen and(max-width: 650px){
+        font-size: 14px;
+      }
     }
   }
 
