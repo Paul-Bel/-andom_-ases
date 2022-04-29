@@ -3,14 +3,15 @@ import {useEffect, useState} from "react";
 import arrow from '../../img/kisspng-arrow-red.png'
 
 export const RandomSquare = () => {
-    const [title, setTitle] = useState<string>('click me')
+    const [titleButton, setTitleButton] = useState<{title: string, count: number}>({title:'', count: 0})
     const state = Math.ceil(Math.random() * 100)
     const [element, setElement] = useState<Array<number>>([])
     useEffect(() => {
         onClickHandler()
     }, [])
     const onClickHandler = () => {
-        setTitle('click me again')
+        let titleName = titleButton.count === 1 ? 'click me again' : titleButton.count > 1 ?  'you can click again' : 'click me'
+        setTitleButton({...titleButton, count: titleButton.count+1, title: titleName})
         let arr = []
         for (let i = 0; i < (state < 10 ? 10 : state); i++) {
             arr.push(state)
@@ -29,7 +30,7 @@ export const RandomSquare = () => {
                 })}
             </div>
             <button className={style.button} onClick={onClickHandler}>
-                {title}
+                {titleButton.title}
             </button>
             <div className={style.line} style={{backgroundImage: `url(${arrow})`}}/>
         </div>

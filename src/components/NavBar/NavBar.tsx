@@ -8,12 +8,11 @@ export const NavBar = () => {
         <nav className={s.headerContainer}>
             <NavLink to={"/Slider"} className={s.activeLink}>Slider</NavLink>
             <NavLink to={"/Canvas"} className={s.activeLink + ' ' + s.screen}>Canvas</NavLink>
-            <NavLink to={"/Video"} className={s.activeLink}>Video</NavLink>
             <NavLink to={"/GetData"} className={s.activeLink}>GetData</NavLink>
             <NavLink to={"/Blocks"} className={s.activeLink}>Blocks</NavLink>
             <NavLink to={"/ShowElement"} className={s.activeLink}>Show El-t</NavLink>
             <NavLink to={"/Squares"} className={s.activeLink}>Squares</NavLink>
-
+            <NavLink to={"/Video"} className={s.activeLink}>Video</NavLink>
         </nav>
     )
 }
